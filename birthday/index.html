@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f8ece8"><title>A Day Made of You — Cherovia</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
+:root{--cream:#fffaf4;--pink:#f4e2e1;--rose:#bd7888;--brown:#59433d;--muted:#987c74}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--brown);font-family:'DM Sans',sans-serif}
+header{position:absolute;top:0;width:100%;padding:23px 7vw;display:flex;justify-content:space-between;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#987c74}
+.brand{font:19px 'Playfair Display';letter-spacing:1px;text-transform:none;color:var(--brown)}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:100px 20px 65px;position:relative;background:radial-gradient(ellipse at center,#f7e4e2 0,transparent 57%),linear-gradient(135deg,#fffaf4,#f9eeea)}
+.hero:before,.hero:after{content:"";position:absolute;width:250px;height:250px;border:1px solid #e9cfd0;border-radius:50%;opacity:.5}.hero:before{left:-150px;top:20%}.hero:after{right:-150px;bottom:5%}
+.hero-inner{max-width:760px;position:relative}.stamp{width:82px;height:82px;border:1px solid #d7aab2;border-radius:50%;display:grid;place-items:center;margin:0 auto 25px;color:var(--rose);font:italic 13px 'Playfair Display';transform:rotate(-10deg);background:#fff8f4}
+.kicker,.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--rose)}
+h1{font:500 clamp(3.4rem,10vw,7.2rem)/.98 'Playfair Display';letter-spacing:-2px;margin:20px 0;color:var(--brown)}h1 em{color:var(--rose)}
+.sub{font:italic 19px/1.6 'Playfair Display';color:#92766e;max-width:450px;margin:20px auto 30px}
+button{border:0;border-radius:99px;padding:14px 23px;background:var(--brown);color:#fffaf4;font:12px 'DM Sans';cursor:pointer;transition:.25s}button:hover{background:var(--rose);transform:translateY(-3px)}.ghost{background:transparent;color:var(--brown);border:1px solid #d9c2ba;margin-left:8px}
+.scroll{position:absolute;bottom:23px;font-size:9px;letter-spacing:3px;color:#a88d85}
+section.content{max-width:1000px;margin:auto;padding:85px 22px}.head{text-align:center;margin-bottom:38px}h2{font:500 clamp(2.2rem,6vw,3.5rem)/1.1 'Playfair Display';margin:12px 0}.intro{max-width:500px;margin:14px auto;color:var(--muted);line-height:1.8;font-size:14px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.polaroid{background:white;padding:12px 12px 18px;box-shadow:0 12px 35px #76564b12;transform:rotate(var(--r));transition:.3s}.polaroid:hover{transform:rotate(0) translateY(-8px)}
+.photo{height:220px;display:grid;place-items:center;background:linear-gradient(145deg,#f4dfe0,#f7eee5);font-size:48px;position:relative}.p2{background:linear-gradient(145deg,#e8e3d7,#f7e8e4)}.p3{background:linear-gradient(145deg,#eed8d4,#f4e8d7)}.photo small{position:absolute;bottom:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#8c6e67}.caption{text-align:center;font:italic 17px 'Playfair Display';padding-top:14px}
+.timeline{max-width:650px;margin:auto;border-left:1px solid #dcb9bd;padding-left:28px}.moment{position:relative;margin:0 0 27px;padding-left:8px}.moment:before{content:"";position:absolute;left:-34px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--rose);box-shadow:0 0 0 5px #f6e6e5}.moment b{font:italic 20px 'Playfair Display';font-weight:500}.moment p{font-size:13px;line-height:1.8;color:var(--muted);margin:7px 0}
+.letter-wrap{background:#f5e4e2;padding:70px 20px}.letter{max-width:650px;margin:auto;background:#fffdf9;padding:42px clamp(22px,7vw,65px);text-align:center;box-shadow:0 15px 50px #75534b12;position:relative}.letter:before{content:"";position:absolute;inset:9px;border:1px solid #ead7d1;pointer-events:none}.letter p{font:italic 17px/1.9 'Playfair Display';color:#816b64}.reveal{max-height:0;overflow:hidden;transition:max-height .8s}.reveal.open{max-height:500px}.signature{font:italic 21px 'Playfair Display';color:var(--rose)}
+footer{text-align:center;padding:35px 15px 45px;color:#a88d85;font-size:9px;letter-spacing:2px;text-transform:uppercase}footer strong{font:italic 17px 'Playfair Display';letter-spacing:0;text-transform:none;color:var(--brown);display:block;margin-bottom:8px}
+#wish{display:none;position:fixed;inset:0;background:#59433d66;z-index:5;place-items:center;padding:20px}#wish .box{background:var(--cream);padding:35px 25px;max-width:370px;text-align:center;border:1px solid #e5c8c7}#wish h3{font:italic 32px 'Playfair Display';margin:0 0 12px}#wish p{line-height:1.7;color:var(--muted);font-size:13px}
+@media(max-width:650px){header{padding:19px 20px}.gallery{grid-template-columns:1fr;max-width:330px;margin:auto;gap:25px}.photo{height:245px}.polaroid:nth-child(2){margin-left:10px}.polaroid:nth-child(3){margin-right:10px}section.content{padding:68px 22px}.ghost{margin:10px 0 0}}
+</style></head><body>
+<header><div class="brand">cherovia</div><div>a little birthday story · 01</div></header>
+<section class="hero"><div class="hero-inner"><div class="stamp">made<br>with love ♡</div><div class="kicker">today, the universe celebrates</div>
+<h1>It's your day,<br><em>Olivia.</em></h1><p class="sub">A little collection of love, laughter & all the lovely things you bring into this world.</p>
+<button onclick="document.getElementById('moments').scrollIntoView({behavior:'smooth'})">Come inside ♡</button>
+<button class="ghost" onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">Skip to your letter</button></div><div class="scroll">↓ &nbsp; there's more for you</div></section>
+<section class="content" id="moments"><div class="head"><div class="eyebrow">the little things</div><h2>Reasons you're magic</h2><p class="intro">Some people make ordinary days feel like keepsakes. You're one of them.</p></div>
+<div class="gallery"><div class="polaroid" style="--r:-3deg"><div class="photo">🌷<small>your kind heart</small></div><div class="caption">The way you care</div></div>
+<div class="polaroid" style="--r:2deg"><div class="photo p2">☀️<small>your happy energy</small></div><div class="caption">Your sunshine laugh</div></div>
+<div class="polaroid" style="--r:-2deg"><div class="photo p3">🦋<small>your own kind of magic</small></div><div class="caption">Simply being you</div></div></div></section>
+<section class="content"><div class="head"><div class="eyebrow">a tiny timeline</div><h2>Here's to what comes next</h2><p class="intro">A new chapter, with room for beautiful surprises.</p></div>
+<div class="timeline"><div class="moment"><b>More little adventures</b><p>May your camera roll fill up with places, faces, and moments worth keeping.</p></div><div class="moment"><b>Dreams getting closer</b><p>May the things you've been quietly wishing for find their way to you.</p></div><div class="moment"><b>Love that feels like home</b><p>May you always be surrounded by people who celebrate the real you.</p></div></div></section>
+<div class="letter-wrap" id="letter"><div class="letter"><div class="eyebrow">open when you're ready</div><h2>A note just for you</h2><p>Because birthdays deserve more than just a “happy birthday”...</p><button onclick="document.getElementById('reveal').classList.toggle('open')">Unfold your letter 💌</button>
+<div class="reveal" id="reveal"><p>Dear Olivia,<br><br>I hope this year is gentle with you and generous with its magic. I hope you laugh until your cheeks hurt, find beauty in unexpected places, and never shrink yourself to fit into a space that was never made for you.<br><br>Keep being your wonderfully one-of-a-kind self. The best is still finding its way to you.</p><div class="signature">With all my love, ♡</div></div></div></div>
+<footer><strong>little things, lovingly made.</strong>crafted with care by cherovia · digital studio</footer>
+<div id="wish" onclick="this.style.display='none'"><div class="box"><h3>Make a wish, Olivia ✨</h3><p>Close your eyes for a second. Your next chapter is waiting to be wonderful.</p><button onclick="event.stopPropagation();document.getElementById('wish').style.display='none'">I made one ♡</button></div></div>
+<script>setTimeout(()=>{document.getElementById('wish').style.display='grid'},18000)</script></body></html>
