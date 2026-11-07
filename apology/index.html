@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Apology — Cherovia</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+:root{--ink:#563d38;--muted:#927b73;--rose:#d9a7a5;--paper:#fffaf5;--cream:#f6eee7}
+*{box-sizing:border-box} body{margin:0;background:#f3e9e2;color:var(--ink);font-family:'DM Sans',sans-serif;min-height:100vh;display:grid;place-items:center;padding:24px}
+.card{width:min(100%,440px);background:var(--paper);padding:38px 28px 30px;text-align:center;border:1px solid #e9d9d0;box-shadow:0 22px 70px #6b49301c;position:relative;overflow:hidden}
+.card:before,.card:after{content:"";position:absolute;width:130px;height:130px;border:1px solid #e8d4cc;border-radius:50%;opacity:.55}
+.card:before{top:-88px;left:-70px}.card:after{bottom:-90px;right:-70px}
+.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#a17e76}
+h1{font:500 clamp(34px,9vw,48px)/1.1 'Playfair Display',serif;margin:18px 0 10px}
+h1 em{color:#bd8584;font-weight:500}
+.sub{font-size:13px;line-height:1.8;color:var(--muted);max-width:290px;margin:0 auto}
+.divider{display:flex;align-items:center;gap:12px;justify-content:center;margin:26px 0;color:#c69a92;font-size:15px}
+.divider:before,.divider:after{content:"";height:1px;width:65px;background:#ead8d0}
+.envelope{margin:0 auto 18px;width:112px;height:82px;background:#f0d9d2;position:relative;display:grid;place-items:center;cursor:pointer;transition:transform .3s}
+.envelope:before{content:"";position:absolute;inset:0;background:#e8c9c3;clip-path:polygon(0 0,50% 58%,100% 0)}
+.envelope span{position:relative;z-index:1;font-size:24px;margin-top:22px}
+.hint{font-size:11px;color:#a88980;margin-bottom:22px}
+.letter{display:none;text-align:left;background:#fffdfb;border:1px solid #eee0d9;padding:22px 20px;margin:0 auto 20px;animation:rise .55s ease both}
+.letter.show{display:block}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.letter p{font:15px/1.9 'Playfair Display',serif;color:#684f49;margin:0 0 12px}
+.signature{font:italic 17px 'Playfair Display',serif;color:#b17d7b;margin-top:14px}
+button{border:0;background:#765650;color:#fffaf5;padding:13px 22px;font:500 11px 'DM Sans',sans-serif;letter-spacing:1.4px;text-transform:uppercase;cursor:pointer;transition:.2s}
+button:hover{background:#5f423d;transform:translateY(-1px)}
+.note{font-size:10px;color:#b19a91;margin-top:25px;letter-spacing:.7px}
+.footer{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#b49b91;margin-top:22px}
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="eyebrow">A little something, from the heart</div>
+  <h1>I'm <em>sorry.</em></h1>
+  <p class="sub">I know a little message can't fix everything, but I hope it can be a small first step.</p>
+  <div class="divider">✳</div>
+  <div class="envelope" id="envelope" aria-label="Open the letter"><span>✉</span></div>
+  <div class="hint" id="hint">A letter is waiting for you. Tap to open.</div>
+  <section class="letter" id="letter">
+    <p>Hey you,</p>
+    <p>I've been thinking about what happened, and I don't want to brush it aside or pretend it didn't matter. I'm genuinely sorry for hurting you.</p>
+    <p>You deserved more care from me in that moment. I'm listening, I want to understand how you feel, and I'll do my best to show you through my actions—not just words.</p>
+    <p>You don't have to reply right away. Take the time you need. I just wanted you to know that you matter to me.</p>
+    <div class="signature">With a sincere sorry ♡</div>
+  </section>
+  <button id="openBtn">Open my letter</button>
+  <div class="note">No pressure to forgive. Just an honest apology.</div>
+  <div class="footer">little things, lovingly made · cherovia digital studio</div>
+</main>
+<script>
+const letter=document.getElementById('letter'), btn=document.getElementById('openBtn'), env=document.getElementById('envelope');
+function openLetter(){letter.classList.add('show');btn.textContent='A little note, just for you';btn.disabled=true;document.getElementById('hint').textContent='I meant every word.';env.style.transform='scale(.94)'}
+btn.addEventListener('click',openLetter);env.addEventListener('click',openLetter);
+</script>
+</body>
+</html>
